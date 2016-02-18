@@ -1,0 +1,10 @@
+<h1>Lists:</h1><br>
+
+<div ng-controller="listsController">
+
+<input type="text" ng-model="newList.name"><button ng-click="add()">add</button><br>
+  <div ng-repeat="list in lists track by $index">
+      <button id="button{{list.id}}">delete</button> {{$index}}. <a href="#/{{list.id}}/todos"> {{ list.name }}{{ list.id }} </a><label> {{list.todos_count}} </label>
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+
+
+
+
+<h1>Todos for List: {{ list }}</h1><br>
+
+<div ng-controller="todosController">
+
+<input type="text" ng-model="todo.name"><button ng-click="add()">add task</button><br>
+  <div ng-repeat="todo in todos track by $index">
+    <p><button ng-click="delete(todo.id)">delete</button> {{$index}}. {{ todo.name }}  <label> {{todo.todos_count}} </label></p>
+  </div>
+
+</div>
+
+<a href="#/lists">Back to Lists</a>
